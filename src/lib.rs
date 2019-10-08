@@ -5,6 +5,7 @@ use std::io::prelude::*;
 
 const SECRET_PATH: &'static str = "/run/secrets";
 
+/// Get Docker secrets list
 pub fn get_list() -> Result<Vec<String>, &'static str> {
     let path = Path::new(SECRET_PATH);
     match read_dir(path) {
@@ -22,6 +23,8 @@ pub fn get_list() -> Result<Vec<String>, &'static str> {
     }
 }
 
+/// Get a Docker secret by name
+/// If error or the secret does not exist - returns Error
 pub fn get(secret_name: &str) -> Result<String, &str> {
     match File::open(format!("{}/{}", SECRET_PATH, secret_name)) {
         Ok(file) => {
