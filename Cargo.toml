@@ -1,0 +1,12 @@
+[package]
+name = "docker_secrets"
+version = "0.1.0"
+authors = ["Alex Tkachuk <alex@pagespeed.green>"]
+edition = "2018"
+description = "Returns Docker secrets in Rust"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["docker", "secrets"]
+repository = "https://github.com/alexgreencode/docker_secrets.git"
+
+[dependencies]
