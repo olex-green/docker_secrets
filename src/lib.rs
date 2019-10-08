@@ -32,7 +32,7 @@ pub fn get(secret_name: &str) -> Result<String, &str> {
                return Err("Read secrets is failed")
             }
 
-            Ok(contents)
+            Ok(contents.trim().to_string())
         },
         Err(_) => {
             Err("Read secrets path is failed")

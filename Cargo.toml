@@ -1,6 +1,6 @@
 [package]
 name = "docker_secrets"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Alex Tkachuk <alex@pagespeed.green>"]
 edition = "2018"
 description = "Returns Docker secrets in Rust"
